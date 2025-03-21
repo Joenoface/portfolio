@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Futuristic Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f0f0f, #0d3300);
+            color: #0fff95;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(90deg, #00ff7f, #006400);
+            padding: 20px;
+            font-size: 26px;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 0 15px #00ff7f;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 120px 20px 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+            position: relative;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .profile {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 6px solid #00ff7f;
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile:hover {
+            transform: scale(1.15);
+        }
+        .section {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 255, 127, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 127, 0.5);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        .btn {
+            background: #00ff7f;
+            color: #0f0f0f;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background: #00cc66;
+            transform: scale(1.1);
+        }
+        .circular-groove {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #00ff7f;
+            box-shadow: 0 0 15px #00ff7f;
+            overflow: hidden;
+        }
+        .circular-groove img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .groove-right {
+            top: 50%;
+            right: -80px;
+            transform: translateY(-50%);
+        }
+        .groove-left {
+            top: 50%;
+            left: -80px;
+            transform: translateY(-50%);
+        }
+
+
+        .cover-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: url('cover.jpg') no-repeat center center/cover;
+        }
+        .profile-container {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <header>👽JOENOFACE👽</header>
+    <div class="container">
+        <div class="cover-container">
+            <div class="profile-container">
+                <img src="profile.jpg" alt="Joe's Profile" class="profile">
+            </div>
+        </div>
+        <h2>Software Engineer & Developer</h2>
+        <p>Skilled in Java, Python, HTML, CSS, Dart, JavaScript, Node.js, React, Swift, and MySQL.</p>
+        
+        <section class="section">
+            <h3>Skills</h3>
+            <p>Java | Python | Dart | React | Swift | Node.js | MySQL | HTML | CSS | JavaScript</p>
+            <div class="circular-groove groove-right">
+                <img src="code.png" alt="Skills">
+            </div>
+        </section>
+        
+        <section class="section">
+            <h3>Projects</h3>
+            <p>Check out my latest projects on GitHub:</p>
+            <button class="btn" onclick="window.open('https://github.com/Joenoface')">GitHub Profile</button>
+            <div class="circular-groove groove-left">
+                <img src="icon.png" alt="Projects">
+            </div>
+        </section>
+        
+        <section class="section">
+            <h3>Photo & Video Gallery</h3>
+            <div class="gallery">
+                <img src="project1.jpg" alt="Project Image">
+                <img src="project2.jpg" alt="Project Image">
+                <video controls>
+                    <source src="post.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </div>
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Skills</a>
+            <a href="#">Projects</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footer-socials">
+            <a href="https://github.com/Joenoface" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/joseph-koinange-66222a260/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/joseph_koinange" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2025 JOENOFACE. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background: linear-gradient(90deg, #00ff7f, #006400);
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 40px;
+        box-shadow: 0 0 15px #00ff7f;
+    }
+    .footer-container {
+        width: 80%;
+        margin: auto;
+    }
+    .footer-links a {
+        color: #0f0f0f;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 15px;
+        transition: 0.3s ease-in-out;
+    }
+    .footer-links a:hover {
+        color: #000;
+        text-shadow: 0 0 10px #0fff95;
+    }
+    .footer-socials {
+        margin: 10px 0;
+    }
+    .footer-socials a {
+        color: #0f0f0f;
+        font-size: 24px;
+        margin: 0 10px;
+        transition: 0.3s ease-in-out;
+    }
+    .footer-socials a:hover {
+        color: #000;
+        text-shadow: 0 0 15px #0fff95;
+    }
+    p {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #0f0f0f;
+        font-weight: bold;
+    }
+</style>
+
+</html>
